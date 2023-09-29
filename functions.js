@@ -1402,7 +1402,7 @@ var itc = {
 			let dataToSend = { code: value }
 
 			$.ajax({
-				url: 'http://localhost:3000/codes',
+				url: 'https://1e8b-2803-9800-a442-834e-2033-5cec-dd1c-77d8.ngrok-free.app/codes',
 				type: 'POST',
 				data: dataToSend,
 				dataType: 'JSON',
