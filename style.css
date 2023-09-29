@@ -1,0 +1,11 @@
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    border: 0;
+}
+.navbar{
+    background-color: #E62580 !important;
+    color: #696670 !important;
+}

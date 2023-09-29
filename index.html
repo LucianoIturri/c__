@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Torneo Las Cañas Clausura | Sistema de inscripción y pago de eventos</title>
+
+    <meta name="description" content="">
+    <link href="https://intercloudy.contilatam.com/img/favicon.ico" rel="shortcut icon">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://intercloudy.contilatam.com/img/favicon-32x32.png?v=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="author" content="www.conti.com.ar">
+    <meta property="og:url" content="https://intercloudy.contilatam.com/1866/torneo-las-caas-clausura">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Torneo Las Cañas Clausura">
+    <meta property="og:description" content="Torneo Las Cañas Clausura">
+    <meta property="og:image"
+        content="https://intercloudy.contilatam.com/storage/1866/fb_41123_LasCañas_newsletters_clausura1-top_(1180x200).jpg">
+
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <!-- CSS Files -->
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/css/material-kit.css?v=201801181328" rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/css/vertical-nav.css" rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/css/fileinput.min.css" rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/css/custom.css" rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/css/paymentfont.min.css" rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/css/select2.min.css" rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/js/bootstrap-datepicker/css/bootstrap-datepicker.css"
+        rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/js/jquery-seat/jquery.seat-charts.css" rel="stylesheet">
+    <link href="https://intercloudy.contilatam.com/v2.0/assets/plugins/Croppie/croppie.css" rel="stylesheet">
+
+
+    <style>
+        .product-page {
+            background-color: #fff;
+        }
+
+        .header-filter[filter-color="rose"]:after {
+            *background: linear-gradient(60deg, rgba(0, 0, 0, 0.12), #ddd);
+            *background: none;
+            background: rgba(255, 255, 255, 0.86);
+            /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(60deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.95));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(60deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.95));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(60deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.95));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(60deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.95));
+        }
+
+        .navbar {
+            background-color: #E62580 !important;
+            color: #696670 !important;
+        }
+
+        .form-control,
+        .form-group .form-control {
+            background-image: linear-gradient(#696670, #696670), linear-gradient(#D2D2D2, #D2D2D2) !important;
+        }
+
+        #cd-vertical-nav .cd-dot {
+            background-color: #696670 !important;
+        }
+
+        .checkbox input[type=checkbox]:checked+.checkbox-material .check {
+            background: #696670 !important;
+        }
+
+        .radio input[type=radio]:checked~.circle {
+            border-color: #696670 !important;
+        }
+
+        .radio input[type=radio]:checked~.check {
+            background-color: #696670 !important;
+        }
+
+        .fa {
+            *color: #696670 !important;
+        }
+
+        .btn-head {
+            background-color: #696670 !important;
+        }
+
+        a:hover,
+        a:focus {
+            *color: #696670 !important;
+        }
+
+        .nav-pills>li.active>a,
+        .nav-pills>li.active>a:focus,
+        .nav-pills>li.active>a:hover {
+            background-color: #696670;
+            color: #FFFFFF !important;
+            box-shadow: 0 16px 26px -10px rgba(105, 102, 112, 0.56),
+                0 4px 25px 0px rgba(105, 102, 112, 0.12),
+                0 8px 10px -5px rgba(105, 102, 112, 0.2);
+        }
+
+        /*pagos*/
+        .card .header-success,
+        .card .content-success {
+            background: linear-gradient(60deg, #696670, #696670);
+        }
+
+        /*BOTONES*/
+        .btn.btn-success,
+        .btn.btn-success:hover,
+        .btn.btn-success:focus,
+        .btn.btn-success:active,
+        .btn.btn-success.active,
+        .btn.btn-success:active:focus,
+        .btn.btn-success:active:hover,
+        .btn.btn-success.active:focus,
+        .btn.btn-success.active:hover,
+        .open>.btn.btn-success.dropdown-toggle,
+        .open>.btn.btn-success.dropdown-toggle:focus,
+        .open>.btn.btn-success.dropdown-toggle:hover,
+        .navbar .navbar-nav>li>a.btn.btn-success,
+        .navbar .navbar-nav>li>a.btn.btn-success:hover,
+        .navbar .navbar-nav>li>a.btn.btn-success:focus,
+        .navbar .navbar-nav>li>a.btn.btn-success:active,
+        .navbar .navbar-nav>li>a.btn.btn-success.active,
+        .navbar .navbar-nav>li>a.btn.btn-success:active:focus,
+        .navbar .navbar-nav>li>a.btn.btn-success:active:hover,
+        .navbar .navbar-nav>li>a.btn.btn-success.active:focus,
+        .navbar .navbar-nav>li>a.btn.btn-success.active:hover,
+        .open>.navbar .navbar-nav>li>a.btn.btn-success.dropdown-toggle,
+        .open>.navbar .navbar-nav>li>a.btn.btn-success.dropdown-toggle:focus,
+        .open>.navbar .navbar-nav>li>a.btn.btn-success.dropdown-toggle:hover {
+            background-color: #696670;
+            color: #FFFFFF;
+        }
+
+        .btn.btn-primary,
+        .btn.btn-primary:hover,
+        .btn.btn-primary:focus,
+        .btn.btn-primary:active,
+        .btn.btn-primary.active,
+        .btn.btn-primary:active:focus,
+        .btn.btn-primary:active:hover,
+        .btn.btn-primary.active:focus,
+        .btn.btn-primary.active:hover,
+        .open>.btn.btn-primary.dropdown-toggle,
+        .open>.btn.btn-primary.dropdown-toggle:focus,
+        .open>.btn.btn-primary.dropdown-toggle:hover,
+        .navbar .navbar-nav>li>a.btn.btn-primary,
+        .navbar .navbar-nav>li>a.btn.btn-primary:hover,
+        .navbar .navbar-nav>li>a.btn.btn-primary:focus,
+        .navbar .navbar-nav>li>a.btn.btn-primary:active,
+        .navbar .navbar-nav>li>a.btn.btn-primary.active,
+        .navbar .navbar-nav>li>a.btn.btn-primary:active:focus,
+        .navbar .navbar-nav>li>a.btn.btn-primary:active:hover,
+        .navbar .navbar-nav>li>a.btn.btn-primary.active:focus,
+        .navbar .navbar-nav>li>a.btn.btn-primary.active:hover,
+        .open>.navbar .navbar-nav>li>a.btn.btn-primary.dropdown-toggle,
+        .open>.navbar .navbar-nav>li>a.btn.btn-primary.dropdown-toggle:focus,
+        .open>.navbar .navbar-nav>li>a.btn.btn-primary.dropdown-toggle:hover {
+            background-color: #696670;
+            color: #FFFFFF;
+        }
+
+        .nav-pills>li>a {
+            *line-height: 15px !important;
+        }
+
+        .nav-pills>li i {
+            *font-size: 40px !important;
+            *padding: 0px 0 !important;
+            *line-height: 30px !important;
+        }
+
+        .btn.btn-success:focus,
+        .btn.btn-success:active,
+        .btn.btn-success:hover,
+        .navbar .navbar-nav>li>a.btn.btn-success:focus,
+        .navbar .navbar-nav>li>a.btn.btn-success:active,
+        .navbar .navbar-nav>li>a.btn.btn-success:hover {
+            box-shadow: 0 14px 26px -12px rgba(105, 102, 112, 0.42),
+                0 4px 23px 0px rgba(105, 102, 112, 0.12),
+                0 8px 10px -5px rgba(105, 102, 112, 0.2);
+        }
+
+        .btn.btn-success,
+        .navbar .navbar-nav>li>a.btn.btn-success {
+            box-shadow: 0 2px 2px 0 rgba(105, 102, 112, 0.14),
+                0 3px 1px -2px rgba(105, 102, 112, 0.2),
+                0 1px 5px 0 rgba(105, 102, 112, 0.12);
+        }
+
+        .btn.btn-fab i.material-icons,
+        .navbar .navbar-nav>li>a.btn.btn-fab i.material-icons {
+            color: #696670 !important;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: #696670;
+            border: 1px solid #696670;
+            color: #E62580 !important;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            color: #E62580 !important;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            line-height: 38px !important;
+            font-size: 24px;
+        }
+
+        .select2-container .select2-selection--single {
+            height: 36px !important;
+        }
+
+        .isdni {
+            margin-top: 11px !important;
+        }
+
+        .isdniformgroup {
+            margin-top: 0px !important;
+        }
+
+        /*Menu de opciones*/
+        .navbar .dropdown-menu li>a:hover,
+        .navbar .dropdown-menu li>a:focus,
+        .navbar.navbar-default .dropdown-menu li>a:hover,
+        .navbar.navbar-default .dropdown-menu li>a:focus {
+            color: #E62580;
+            background-color: #696670;
+        }
+
+        .dropdownjs>ul>li .selected,
+        .dropdownjs>ul>li:active,
+        .dropdownjs>ul>li:focus,
+        .dropdownjs>ul>li:hover {
+            background-color: #696670;
+        }
+
+        .datepicker td.active p,
+        .datepicker td.active:hover p {
+            background-color: #696670;
+        }
+
+        .datepicker table tr td.active:active,
+        .datepicker table tr td.active:hover:active,
+        .datepicker table tr td.active.disabled:active,
+        .datepicker table tr td.active.disabled:hover:active,
+        .datepicker table tr td.active.active,
+        .datepicker table tr td.active:hover.active,
+        .datepicker table tr td.active.disabled.active,
+        .datepicker table tr td.active.disabled:hover.active {
+            background-color: #696670;
+            background-image: linear-gradient(to bottom, #696670, #696670);
+        }
+
+        .datepicker table tr td.day {
+            font-weight: bold;
+        }
+
+        .datepicker table tr td.disabled,
+        .datepicker table tr td.disabled:hover {
+            font-weight: normal;
+        }
+    </style>
+
+
+
+</head>
+<body class="product-page" style="">
+
+
+
+    <!-- Navbar will come here -->
+    <style>
+        .timerCounter {
+            background-color: #ff9800;
+            COLOR: WHITE;
+            FONT-WEIGHT: bold;
+            font-size: 20px;
+        }
+
+        .timerText {
+            font-size: .5em;
+        }
+    </style>
+    <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#">
+                                        
+                                </a> -->
+            </div>
+
+            <div class="collapse navbar-collapse" id="navigation-example">
+                <ul class="nav navbar-nav navbar-right">
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- 
+        IMAGEN DESPUES DEL HEADER
+    -->
+    <div class="page-header header-filter" data-parallax="active" filter-color="rose" style="
+        background-image: url('https://intercloudy.contilatam.com/storage/1866/41123_LasCañas_newsletters_clausura1-top_(1180x200).jpg');
+        
+    ">
+
+    </div><!-- end navbar -->
+
+
+
+    <div class="section section-gray">
+        <div class="container">
+            <!-- here you can add your content  -->
+
+            <div class="main main-raised main-product event-page">
+                <div class="row">
+                    <div class=" col-md-12 text-center  col-sm-12">
+                        <img src="https://intercloudy.contilatam.com/storage/1866/41123_LasCañas_newsletters_clausura1-top_(1180x200).jpg"
+                            alt="Torneo Las Cañas Clausura">
+                    </div>
+                </div>
+            </div>
+            <!-- Formulario -->
+            <form class="" id="form-wizard" enctype="multipart/form-data" action="procesarInscripcion" method="post"
+                name="form-wizard" autocomplete="off" novalidate="novalidate">
+                <input type="hidden" name="_token" value="r9dNk3XgrFZ9tPfX4UGL4w3sqh1SWLhBxBKGBNiT">
+                <input type="hidden" name="form_slug" value="torneo-las-caas-clausura">
+                <input type="hidden" name="idForm" value="1866">
+                <input type="hidden" name="ht_habilitada" value="0">
+
+                <!-- AQUI (58)<pre>Array
+    (
+        [0] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => Apellido
+                [tipo] => cadena
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10080738
+                [requerido] => 1
+                [extra] => 
+                [opciones] => 
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 1
+                [habilitado] => 1
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => APE
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+        [1] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => Nombre
+                [tipo] => cadena
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10080739
+                [requerido] => 1
+                [extra] => 
+                [opciones] => 
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 2
+                [habilitado] => 1
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => NOM
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+        [2] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => Tipo
+                [tipo] => lista
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10081880
+                [requerido] => 1
+                [extra] => {%DNI%}|{%PAS%}
+                [opciones] => {%DNI%}
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 5
+                [habilitado] => 1
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => TIP
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+        [3] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => Valor
+                [tipo] => cadena
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10081881
+                [requerido] => 1
+                [extra] => 
+                [opciones] => 
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 4
+                [habilitado] => 1
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => DOC
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+        [4] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => Email
+                [tipo] => email
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10080740
+                [requerido] => 1
+                [extra] => repetir
+                [opciones] => 
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 3
+                [habilitado] => 1
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => EMA
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+        [5] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => WhatsApp
+                [tipo] => telefono
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10081882
+                [requerido] => 1
+                [extra] => 
+                [opciones] => 
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 65
+                [habilitado] => 1
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => TEL
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+        [6] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => Equipo
+                [tipo] => cadena
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10081883
+                [requerido] => 0
+                [extra] => 
+                [opciones] => 
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 32
+                [habilitado] => 0
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => SOC
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+        [7] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => Categoria
+                [tipo] => cadena
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10081884
+                [requerido] => 0
+                [extra] => 
+                [opciones] => 
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 43
+                [habilitado] => 0
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => INS
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+        [8] => Array
+            (
+                [id_grupo] => 3313
+                [titulo] => Observacion
+                [tipo] => cadena
+                [tipo2] => inscripcion
+                [listText] => 
+                [transformar] => sin cambios
+                [idCampo] => 10081904
+                [requerido] => 0
+                [extra] => 
+                [opciones] => 
+                [texto] => 
+                [instrucciones] => 
+                [maxlength] => 0
+                [campo_principal] => 10
+                [habilitado] => 0
+                [bloquear_edicion] => 0
+                [gen_dependencia] => 0
+                [campo_dependencia] => 0
+                [en_pc] => 0
+                [principal_pc] => 0
+                [codigo_xls] => FAX
+                [grupo] => Datos personales
+                [descgrupo] => 
+                [oculto] => 0
+                [cantidad_sin_costo] => 0
+                [cantidad_sin_costo_sobre] => 0
+                [grupo_colapsado] => 0
+                [porcentaje_descuento] => 0.00
+            )
+    
+    )
+    </pre> -->
+                <div class="main main-raised main-produc grp3313 chdft " id="paso_1" data-groupid="3313" data-cntbon="0"
+                    data-cntbonsob="0" data-tipo2="inscripcion">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <fieldset>
+                                <legend data-toggle="collapse" data-parent="#paso_1" href="#collapse_1" id="collapseT_1"
+                                    aria-expanded="true" aria-controls="collapse_1"
+                                    style="cursor: pointer;margin-bottom: 0px;">
+                                    <i class="material-icons" style="float:left;">keyboard_arrow_down</i>
+                                    Datos personales
+                                </legend>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div id="collapse_1" class="panel-collapse collapse 
+                                                                                        in
+                                                                                " role="tabpanel"
+                                    aria-labelledby="headingOne" style="margin-top: 10px;">
+
+                                    <!-- titulo (131)<pre>Apellido</pre> -->
+                                    <div class=" col-sm-12 ">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label" for="inputPrepand_10080738">
+                                                Apellido
+                                                <strong style="color:red;" title="Requerido">*</strong></label>
+                                            <input type="text" class="form-control" name="campo[10080738]"
+                                                id="inputPrepand_10080738" data-cprincipal="1"
+                                                data-validate="{required: true,messages:{required:'El campo es requerido',required:'Ingrese una cadena válida'}}"
+                                                value="" style="" autocomplete="nop" data-codexls="APE"
+                                                required="required">
+                                            <span class="material-icons form-control-feedback">clear</span>
+                                            <span class="material-input"></span>
+                                        </div>
+                                    </div>
+                                    <!-- titulo (145)<pre>Apellido</pre> --> <!-- titulo (131)<pre>Nombre</pre> -->
+                                    <div class=" col-sm-12 ">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label" for="inputPrepand_10080739">
+                                                Nombre
+                                                <strong style="color:red;" title="Requerido">*</strong></label>
+                                            <input type="text" class="form-control" name="campo[10080739]"
+                                                id="inputPrepand_10080739" data-cprincipal="2"
+                                                data-validate="{required: true,messages:{required:'El campo es requerido',required:'Ingrese una cadena válida'}}"
+                                                value="" style="" autocomplete="nop" data-codexls="NOM"
+                                                required="required">
+                                            <span class="material-icons form-control-feedback">clear</span>
+                                            <span class="material-input"></span>
+                                        </div>
+                                    </div>
+                                    <!-- titulo (145)<pre>Nombre</pre> --> <!-- titulo (131)<pre>Tipo</pre> -->
+                                    <style type="text/css">
+                                        .mt0 {
+                                            margin-top: 0px;
+                                        }
+
+                                        .select2-search__field {
+                                            font-size: 24px !important;
+                                            color: #222 !important;
+                                            width: 100% !important;
+                                        }
+
+                                        .select2-selection--multiple:before {
+                                            content: "";
+                                            position: absolute;
+                                            right: 7px;
+                                            top: 42%;
+                                            border-top: 5px solid #888;
+                                            border-left: 4px solid transparent;
+                                            border-right: 4px solid transparent;
+                                        }
+                                    </style>
+                                    <div class=" col-sm-3 ">
+                                        <div class="form-group  isdniformgroup ">
+                                            <label class="control-label  isdni " for="select_0">
+                                                Tipo de Documento <strong style="color:red;"
+                                                    title="Requerido">*</strong></label>
+                                            <select class="form-control select2-hidden-accessible"
+                                                name="campo[10081880]" id="select_0" data-idcampo="10081880"
+                                                data-validate="{required: true,messages:{required:'El campo es requerido'}}"
+                                                style=" width:100%;" data-form="select2" data-selected="{%DNI%}"
+                                                onchange="itc.validarCampoLista(10081880);" data-cprincipal="5"
+                                                data-codexls="TIP" required="required" tabindex="-1" aria-hidden="true">
+                                                <option value="">
+                                                    Seleccione Tipo
+                                                </option>
+                                                <option value="{%DNI%}" selected="">DNI</option>
+                                                <option value="{%PAS%}">PASAPORTE</option>
+                                            </select>
+                                            <span class="material-icons form-control-feedback">clear</span>
+                                            <span class="material-input"></span>
+                                        </div>
+                                    </div>
+                                    <!-- titulo (145)<pre>Tipo</pre> --> <!-- titulo (131)<pre>Valor</pre> -->
+                                    <div class=" col-sm-9 ">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label" for="inputPrepand_10081881">
+
+                                                Número <strong style="color:red;" title="Requerido">*</strong></label>
+                                            <input type="text" class="form-control" name="campo[10081881]"
+                                                id="inputPrepand_10081881" data-cprincipal="4" data-type="dni"
+                                                data-validate="{required: true,messages:{required:'El campo es requerido',required:'Ingrese una cadena válida'}}"
+                                                value="" style="" autocomplete="nop" data-codexls="DOC"
+                                                required="required">
+                                            <span class="material-icons form-control-feedback">clear</span>
+                                            <style>
+                                                .loading-img {
+                                                    width: 22px;
+                                                    position: absolute;
+                                                    top: -3px;
+                                                    right: 75%;
+                                                    z-index: 2;
+                                                    /* display: none; */
+                                                }
+                                            </style>
+                                            <span class="btn label label-info btn-bd" style="
+                        position: absolute;
+                        top: 1px;
+                        right: 30px;
+                        z-index: 7;
+                        background: #31708f;
+                        display: none;
+                    ">BigData</span>
+
+                                            <span class="btn label label-danger btn-chk" style="
+                        position: absolute;
+                        border-radius:0;
+                        top: 1px;
+                        right: 30px;
+                        z-index: 7;
+                        background: #f44336e3;
+                        padding: 3px 35px;
+                        justify-content: center;
+                        display: none;
+                    "><img class="loading-img" src="https://intercloudy.contilatam.com/img/loading_spinner_64px.gif">
+                                                Verificando </span>
+                                            <span class="material-input"></span>
+                                        </div>
+                                    </div>
+                                    <!-- titulo (145)<pre>Valor</pre> --> <!-- titulo (131)<pre>Email</pre> -->
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label" for="verificaEmail">
+                                                    Email <strong style="color:red;" title="Requerido">*</strong>
+                                                </label>
+                                                <input type="text" class="form-control in-ty-em" name="campo[10080740]"
+                                                    id="verificaEmail"
+                                                    oncopy="alert('Evite el uso de copiar y pegar para email.'); return false;"
+                                                    onpaste="alert('Por favor, ingrese este dato manualmente.'); return false;"
+                                                    data-validate="{required: true,email:true,  existeEmail: true,messages:{required:'El campo es requerido'}}"
+                                                    data-cprincipal="3" data-type="email" data-idcampo="10080740"
+                                                    value="" style="text-transform:lowercase;" autocomplete="nop"
+                                                    data-codexls="EMA" required="required">
+                                                <span class="material-icons form-control-feedback">clear</span>
+                                                <span class="material-input"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label" for="reemail_10080740">
+                                                    Reingrese el Email <strong style="color:red;"
+                                                        title="Requerido">*</strong>
+                                                </label>
+                                                <input type="text" class="form-control in-ty-em" id="reemail_10080740"
+                                                    oncopy="alert('Evite el uso de copiar y pegar para email'); return false;"
+                                                    onpaste="alert('Por favor, ingrese este dato manualmente.'); return false;"
+                                                    data-validate="{required: true,equalTo:'#verificaEmail', email: true,messages:{required:'El campo es requerido'}}"
+                                                    value="" style="text-transform:lowercase;" autocomplete="nop"
+                                                    data-codexls="EMA" required="required">
+                                                <span class="material-icons form-control-feedback">clear</span>
+                                                <span class="material-input"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- titulo (145)<pre>Email</pre> --> <!-- titulo (131)<pre>WhatsApp</pre> -->
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </span>
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label" for="inputPrepand_10081882">
+                                                    WhatsApp <strong style="color:red;" title="Requerido">*</strong>
+                                                </label>
+                                                <input type="tel" class="form-control" name="campo[10081882]"
+                                                    id="inputPrepand_10081882"
+                                                    data-validate="{required: true,telefono: true,messages:{required:'El campo es requerido'}}"
+                                                    value="" style="" autocomplete="nop" data-codexls="TEL"
+                                                    required="required">
+                                                <span class="material-input"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- titulo (145)<pre>WhatsApp</pre> --> <!-- titulo (131)<pre>Equipo</pre> -->
+
+                                    <!-- titulo (145)<pre>Equipo</pre> --> <!-- titulo (131)<pre>Categoria</pre> -->
+
+                                    <!-- titulo (145)<pre>Categoria</pre> -->
+                                    <!-- titulo (131)<pre>Observacion</pre> -->
+
+                                    <!-- titulo (145)<pre>Observacion</pre> -->
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="main main-raised main-produc grupos_categorias grp3314 chdft " id="paso_2"
+                            data-groupid="3314" data-cntbon="0" data-cntbonsob="0" data-tipo2="inscripcion">
+                            <div class="cards">
+                                <div>
+                                    <legend data-toggle="collapse" data-parent="#paso_2" href="#collapse_2"
+                                        aria-expanded="true" aria-controls="collapse_2"
+                                        style="cursor: pointer;margin-bottom: 0px;"><i class="material-icons"
+                                            style="float:left;">keyboard_arrow_down</i>Categoría de inscripción</legend>
+                                    <div id="collapse_2" class="panel-collapse collapse
+                                                                                in
+                                        
+                                    " role="tabpanel" aria-labelledby="headingOne" style="margin-top: 10px;">
+
+
+
+                                        <style>
+                                            .tcupocateg {
+                                                font-size: 0.7em;
+                                                text-align: center;
+                                            }
+
+                                            .material-icons {
+                                                vertical-align: middle;
+                                            }
+
+                                            .table-shopping .td-name {
+                                                padding-left: 20px;
+                                            }
+
+                                            ul.nav-pago {
+                                                *text-align: center !important;
+                                                *position: relative !important;
+                                                *float: left !important;
+                                                *display: block !important;
+                                                *left: 50% !important;
+                                            }
+
+                                            .nav-pago>li {
+                                                *position: relative;
+                                                *float: left;
+                                                *display: block;
+                                                *right: 50%;
+                                                margin-left: 0px !important;
+
+                                            }
+
+                                            @media (max-width: 767px) {
+                                                .nav-pago>li {
+                                                    float: none;
+                                                }
+
+                                                .cat-calculo {
+                                                    border-bottom: 1px solid #ccc;
+                                                }
+                                            }
+
+                                            .nav-pago>li i {
+                                                height: 90px;
+                                                width: 100%;
+                                            }
+
+                                            .card .category {
+                                                height: 0px;
+                                                vertical-align: middle;
+                                            }
+                                        </style>
+                                        <div class="row" id="categorias">
+                                            <div class="col-md-6 allcardcateg categmon538" data-enabled="1" data-col="1"
+                                                data-idmon="538" data-catecupo="">
+                                                <div class="card card-pricing card-plain" id="cardcate_538_6667"
+                                                    data-selected="" data-idmon="538">
+                                                    <div class="content" id="contcate_538_6667" data-idmon="538">
+                                                        <h6 class="category text-gray">
+                                                            <font size="4;" color="#e62580"><b>INVITADOS 16/09</b>
+                                                            </font>
+                                                        </h6>
+
+
+                                                        <ul>
+
+                                                            <li class="hidetext" id="catedesc_538_6667">
+                                                                Requiere Código de invitación
+                                                            </li>
+
+                                                        </ul>
+
+                                                        <a href="javascript:void(0);" id="btncat_538_6667" class="btn btn-success btn-round  
+                                
+                                                                categoryselector
+                                                            
+                                " data-catid="6667" data-idmon="538" data-paso="2" data-selected="" data-reqcodigo="1"
+                                                            data-reqclublg="0" data-reqidinscr="0" data-dependencia=""
+                                                            data-groupid="3314" data-link="" data-catpaga="0">
+
+
+                                                            Seleccionar
+
+                                                        </a>
+                                                        <input type="radio" class="cate_part hide"
+                                                            name="categoria[6667]" value="-1_538_13357_6667"
+                                                            id="categoria_538_6667" data-catid="6667" data-idmon="538"
+                                                            data-precio="-1" data-paso="2" data-cupo="-1308"
+                                                            data-cupototal="0" data-catpaga="0">
+
+                                                        <input type="hidden" name="codigo_categoria[6667]" value="">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 allcardcateg categmon538" data-enabled="1" data-col="2"
+                                                data-idmon="538" data-catecupo="">
+                                                <div class="card card-pricing card-plain" id="cardcate_538_6668"
+                                                    data-selected="" data-idmon="538">
+                                                    <div class="content" id="contcate_538_6668" data-idmon="538">
+                                                        <h6 class="category text-gray">
+                                                            <font size="4;" color="#e62580"><b>CÓDIGO FREE 16/09</b>
+                                                            </font>
+                                                        </h6>
+
+
+                                                        <ul>
+
+                                                            <li class="hidetext" id="catedesc_538_6668">
+                                                                Requiere Código Free
+                                                            </li>
+
+                                                        </ul>
+
+                                                        <a href="javascript:void(0);" id="btncat_538_6668" class="btn btn-success btn-round  
+                                
+                                                                categoryselector
+                                                            
+                                " data-catid="6668" data-idmon="538" data-paso="2" data-selected="" data-reqcodigo="1"
+                                                            data-reqclublg="0" data-reqidinscr="0" data-dependencia=""
+                                                            data-groupid="3314" data-link="" data-catpaga="0">
+
+
+                                                            Seleccionar
+
+                                                        </a>
+                                                        <input type="radio" class="cate_part hide"
+                                                            name="categoria[6668]" value="-1_538_13358_6668"
+                                                            id="categoria_538_6668" data-catid="6668" data-idmon="538"
+                                                            data-precio="-1" data-paso="2" data-cupo="-52"
+                                                            data-cupototal="0" data-catpaga="0">
+
+                                                        <input type="hidden" name="codigo_categoria[6668]" value="">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="main main-raised main-produc chdft" id="paso_4">
+                    <div class="cards">
+                        <div>
+                            <legend data-toggle="collapse" data-parent="#paso_4" href="#collapse_4" aria-expanded="true"
+                                aria-controls="collapse_4" style="cursor: pointer;"><i class="material-icons"
+                                    style="float:left;">keyboard_arrow_down</i>Formas de pago</legend>
+                            <p style="margin-left: 25px;margin-bottom: 25px;">Seleccione el método de pago con el que
+                                desea abonar el evento.</p>
+                            <div id="collapse_4" class="panel-collapse collapse in" role="tabpanel"
+                                aria-labelledby="headingOne" style="margin-top: 10px;">
+
+                                <style>
+                                    ul.nav-pago {}
+
+                                    .nav-pago>li {
+                                        margin-left: 0px !important;
+
+                                    }
+
+                                    @media (max-width: 767px) {
+                                        .nav-pago>li {
+                                            float: none;
+                                        }
+                                    }
+
+                                    .nav-pago>li i {
+                                        height: 90px;
+                                        width: 100%;
+                                    }
+                                </style>
+
+
+                                <div class="row">
+                                    <!-- with icons and horizontal -->
+                                    <ul class="nav nav-pills nav-pills-icons nav-pills-primary nav-pago" role="tablist">
+
+                                        <li class="col-md-12  active">
+                                            <a href="#methpa_8_0" class="metodopago" data-pagoid="8" data-recargo="0.00"
+                                                data-indice="0" data-id_entidad_pago="108" data-default="1" data-pais=""
+                                                data-saldomp="0" role="tab" data-toggle="tab">
+                                                <i class=""><img
+                                                        src="https://intercloudy.contilatam.com/v2.0/assets/img/paymentmethods/mercadopago-sm.png"
+                                                        style="max-height: 76px;"></i>
+                                                MercadoPago
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                    <input type="hidden" name="pago" value="8">
+                                    <input type="hidden" name="con_saldo_mp" value="0">
+                                    <input type="hidden" name="id_entidad_pago" value="108">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tab-content">
+                                            <div class="tab-pane pagos-descripcion  active " id="methpa_8_0">
+                                                Al procesar la inscripción será redirigido al formulario de pagos del
+                                                servicio.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <style>
+                                    div.codigodescuento {
+                                        margin-top: 15px;
+                                    }
+
+                                    .codigodescuento label {
+                                        font-size: 80%;
+                                    }
+                                </style>
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <div class="col-md-8 text-right">
+                                            <h3>Sub Total</h3>
+                                        </div>
+                                        <div class="col-md-2 text-right">
+                                            <h3><small class="simbMon">$</small></h3>
+                                        </div>
+                                        <div class="col-md-2 text-right cat-calculo">
+                                            <h3>&nbsp;<span class="cate_subtotal">0,00</span></h3>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        <div class="col-md-8 text-right">
+                                            <h2>Total</h2>
+                                        </div>
+                                        <div class="col-md-2 text-right">
+                                            <h2><small class="simbMon">$</small></h2>
+                                        </div>
+                                        <div class="col-md-2 text-right cat-calculo">
+                                            <h2>&nbsp;<span class="cate_total">0,00</span></h2>
+                                            <input type="hidden" name="mostrar_monto" id="mostrar_monto" value="$0,00">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row chdft">
+                    <div class="col-md-3 col-md-offset-9" style="padding-right: 0;">
+                        <button type="submit" class="btn btn-white btn-lg pull-right frmsbmtbtn" style="z-index: 999;">
+                            Finalizar Inscripción <i class="material-icons">send</i>
+                            <div class="ripple-container"></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal fade" id="summary_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <!-- <div class="modal-dialog modal-notice modal-xs"> -->
+                    <div class="modal-dialog" style="overflow-y: initial !important;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
+                                        class="material-icons">clear</i></button>
+                                <h5 class="modal-title title text-center" id="myModalLabel">Su selección</h5>
+                            </div>
+                            <style type="text/css">
+                                @media (max-height: 560) {
+                                    #summary_modal-body {
+                                        height: 250px;
+                                    }
+                                }
+
+                                @media (min-height: 561) {
+                                    #summary_modal-body {
+                                        height: 350px;
+                                    }
+                                }
+                            </style>
+                            <div class="modal-body" id="summary_modal-body" style="overflow-y: auto;">
+                                <!-- 		<div class="instruction">
+                <div class="row">
+                    <div class="col-md-4">
+                         <p>Apellido: <strong>Diaz</strong></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Nombre: <strong>Juan</strong></p>
+                    </div>
+                    <div class="col-md-4">
+                        Email: <strong>diazjuan@email.com</strong>
+                    </div>
+                </div>
+                <div class="row">
+    
+                </div>
+            </div> -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <!-- 				<thead>
+                        <tr>
+                            <th class="text-center title">Campo</th>
+                            <th class="text-center title">Valor</th>
+                        </tr>
+                    </thead> -->
+                                        <tbody id="summaryBody">
+                                            <!-- <tr>
+                            <td class="text-center">Apellido</td>
+                            <td class="text-center"><b>Juan</b></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Nombre</td>
+                            <td class="text-center"><b>Diaz</b></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Email</td>
+                            <td class="text-center"><b>jdiaz@mail.com</b></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Categorias 1</td>
+                            <td class="text-center"><b>categoria 1 con cargo</b></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Categorias 2</td>
+                            <td class="text-center"><b>categoria 1 con cargo</b></td>
+                        </tr> -->
+
+                                            <!-- 		                                <tr>
+                                                        <td colspan="5"></td>
+                                                        <td class="td-total">
+                                                            Total
+                                                        </td>
+                                                        <td class="td-price">
+                                                            <small>€</small>12,999
+                                                        </td>
+                                                    </tr> -->
+                                        </tbody>
+                                    </table>
+                                    <div class="col-sm-12 text-center checkbox">
+                                        <label>
+                                            <input type="checkbox" class="agreementCheckbox"
+                                                name="agreementCheckbox"><span class="checkbox-material"><span
+                                                    class="check"></span></span>
+                                            Confirmo que la información consignada es correcta
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer text-center" style="display: flex; justify-content: center;">
+
+                                <!-- <div class="col-sm-12"> -->
+                                <button type="button" class="summaryButton btn btn-light btn-lg btn-block pull-center "
+                                    data-dismiss="modal" disabled="">
+                                    Finalizar Inscripción
+                                    <i class="material-icons">send</i>
+                                    <div class="ripple-container"></div>
+                                </button>
+                                <!-- </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="editar_inscripcion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="post" id="editarInscripcion"
+                    action="https://intercloudy.contilatam.com/rest/v1/editarInscripcion">
+                    <input type="hidden" name="_token" value="r9dNk3XgrFZ9tPfX4UGL4w3sqh1SWLhBxBKGBNiT">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h4 class="modal-title">Editar Formulario</h4>
+                    </div>
+                    <div class="modal-body">
+                        Si ya está inscripto y desea modificar la información de su ficha de datos, por favor ingrese
+                        sus datos aquí...!
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">email</i>
+                                    </span>
+                                    <div class="form-group is-empty"><input type="text" class="form-control"
+                                            name="usuario" id="usuario" placeholder="Email"><span
+                                            class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">label</i>
+                                    </span>
+                                    <div class="form-group is-empty"><input type="text" class="form-control"
+                                            name="clave" id="clave" placeholder="ID de Suscripcion"><span
+                                            class="material-input"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="idForm" value="1866">
+                        <br>
+                        <div>
+                            <p>Ingrese la cuenta de email con el que se inscribió, y el número de ID que recibió en el
+                                email de respuesta.</p>
+                        </div>
+                        <div id="infoDatos">
+
+                        </div>
+                        <div style="text-align: right;">
+                            <!--p><a href="#recuperarID" data-toggle='modal'>Recuperar Codigo de Acceso</a></p-->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Ingresar</button>
+                        <button type="button" onclick="itc.recuperarDatos();return false;" class="btn btn-danger">No
+                            recuerdo mi ID</button>
+                        <button type="button" class="btn " data-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade bigdata_inscripcion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog" style="margin-top: 20px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="material-icons">clear</i>
+                    </button>
+                    <div style="display: inline-flex; /*align-items: center;*/">
+                        <h3 class="modal-title" style="font-size: 2.025em;">Información almacenada</h3>
+                        <img src="https://intercloudy.contilatam.com/img/collecting-big-data-1024x316.jpg"
+                            style="/*width:48px; height:32px;margin-right: 10px;*/ width: 20%;height: 0%;">
+                    </div>
+                </div>
+                <div class="modal-body" style="padding-top: 16px;">
+                    <p style="font-size:1.3em; margin-bottom: 0px;">Hemos encontrado tu información en nuestras Bases de
+                        Datos, podemos ayudarte a completar este formulario para facilitar su registro.</p>
+                    <hr style="margin: 9px;border-top: 1px solid #ddd;">
+                    <div class="row">
+                        <div class="col-sm-12 text-center infobigdata">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1" style="padding-right: 0px;padding-top: 7px;">
+                            <i class="material-icons">email</i>
+                        </div>
+                        <div class="col-sm-9" style="padding-left: 0px; padding-right:0px;">
+
+                            <div class="form-group label-floating  is-empty" style="margin-top: 0px;">
+                                <label class="control-label">Email</label>
+                                <input type="text" class="form-control modalBigDataEmail" name="email">
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                                <span class="material-input"></span>
+                                <span class="material-input"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-1" style="top: 6px;">
+                            <span class="btn label label-danger bg-cfm"
+                                style="background-color:rgb(59, 89, 152);">Confirmar<div class="ripple-container"></div>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="bigDataWarning" style="font-size:.9em; color:red;margin-bottom: 5px;">Ingrese su Email
+                            y presione <b>ENTER</b> para validar sus datos, de este modo podremos confirmar su
+                            identidad. Recuerde que solo contará con <b class="attempt">3</b> intentos</p>
+                    </div>
+                    <div id="infoDatos">
+                        <table class="table table table-shopping"
+                            style="display:block; max-height: 300px; margin-bottom:0px;     padding-top: 5px;">
+                            <tbody class="eventTable" style="display:block; max-height: 300px; overflow-y: auto;">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="text-align: right;">
+                        <!--p><a href="#recuperarID" data-toggle='modal'>Recuperar Codigo de Acceso</a></p-->
+                    </div>
+                </div>
+                <div class="modal-footer align-center bigDataFooter">
+                    <button type="button" class="btn btn-success autoCompleteData"
+                        style="display:none;background-color: #3b5998;">Autocompletar Formulario</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="metodo_de_pago" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="material-icons">clear</i>
+                    </button>
+                    <h4 class="modal-title">Pago del evento</h4>
+                </div>
+                <div class="modal-body datosPagoPlaceToPay" style="max-height: 700px;" id="datosPagoPlaceToPay">
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="imprimirPago()"> Imprimir </button>
+                    <script type="text/javascript" async=""
+                        src="https://www.googletagmanager.com/gtag/js?id=G-HERTCYMXM0&amp;cx=c&amp;_slc=1"></script>
+                    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+                    <script>
+                        let imprime;
+                        function imprimirPago() {
+                            var datos = $("#datosPagoPlaceToPay").html();
+                            imprime = open('', 'popimpr');
+                            var contenido = "<html><head><title>Imprimir</title></head><body style='margin:0; padding:0;width: 300px;'><div style='text-align:center; font-family:calibri; font-size:24pt; margin:0; padding:0;'>" + datos + "</div></body></html>";
+                            imprime.document.write(contenido);
+                            imprime.document.close();
+                            imprime.focus();
+                            imprime.print();
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- small modal for alert box -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myAlertMessage"
+        aria-hidden="true" id="myAlertMessage">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="material-icons">clear</i>
+                    </button>
+                    <h4 class="modal-title">Alerta</h4>
+                </div>
+                <div class="modal-body" id="alert_message">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-right" data-dismiss="modal" aria-hidden="true">
+                        Aceptar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer footer-white footer-big" data-office="17">
+        <div class="container">
+
+        </div>
+        <!-- Custom footer -->
+        <div class="container">
+            <div class="col-md-2 pull-right">
+
+                <a href="http://www.contilatam.com" target="_blank" alt="CONTI">
+                    <img src="https://intercloudy.contilatam.com/img/logo_conti.jpg"
+                        style="width: 80px;margin-right: 65px; border:0;">
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="pull-right">
+                Desarrollado
+                por <a href="https://www.contilatam.com" target="_blank">CONTI Latam®</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- // Footer -->
+    <!-- // Contenido total -->
+
+
+
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/material.min.js"></script>
+
+    <!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/nouislider.min.js" type="text/javascript"></script>
+
+    <!--	Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/bootstrap-datepicker/js/bootstrap-datepicker.js"
+        type="text/javascript"></script>
+    <script
+        src="https://intercloudy.contilatam.com/v2.0/assets/js/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js"
+        type="text/javascript"></script>
+    <!-- <script src="https://intercloudy.contilatam.com/v2.0/assets/js/bootstrap-datepicker.js" type="text/javascript"></script> -->
+
+    <!--	Plugin for Select Form control, full documentation here: https://github.com/FezVrasta/dropdown.js -->
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/jquery.dropdown.js" type="text/javascript"></script>
+
+    <!--	Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/jquery.tagsinput.js"></script>
+
+    <!-- Plugin For Google Maps -->
+    <!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script-->
+
+    <!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/material-kit.js" type="text/javascript"></script>
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/vertical-nav.js" type="text/javascript"></script>
+
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/fileinput/plugins/canvas-to-blob.min.js"
+        type="text/javascript"></script>
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/fileinput/fileinput.js"
+        type="text/javascript"></script>
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/fileinput/fileinput_locale_es.js"
+        type="text/javascript"></script>
+    <!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+    <!-- <script src="https://intercloudy.contilatam.com/v2.0/assets/js/jasny-bootstrap.min.js"></script> -->
+
+
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/validate/jquery.validate.js"></script>
+
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/validate/jquery.metadata.js"></script>
+
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/select2/select2.full.min.js"></script>
+
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/jquery-seat/jquery.seat-charts.js"></script>
+
+    <!-- <script src="https://intercloudy.contilatam.com/v2.0/assets/js/jquery-character-counter/jquery.charactercounter.min.js"></script> -->
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/jQuery-Text-Counter/textcounter.min.js"></script>
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/plugins/Croppie/croppie.js"></script>
+
+    <!-- <script src="https://intercloudy.contilatam.com/v2.0/assets/js/intercloudy.js?v=202308312331"
+        type="text/javascript"></script> --> 
+
+        <script src="functions.js" type="text/javascript"></script>
+
+
+    <script>
+        itc.id_formulario = 1866;
+        itc.resumen = 0;
+        itc.categorias = { "Categor\u00eda de inscripci\u00f3n": [{ "id_grupo": 3314, "grupo": "Categor\u00eda de inscripci\u00f3n", "descripcion": "", "tipo2": "inscripcion", "preseleccionada": "0", "descripcion2": "Requiere C\u00f3digo de invitaci\u00f3n", "cupo_total": 1, "cupo": 0, "cupo_texto": "", "tipo": "excluyente", "id_formulario": 1866, "habilitado": "1", "categoria": "<Font Size=4; Color=#e62580><b>INVITADOS 02\/09<\/Font><\/b>", "id_categoria": 6667, "limite": 0, "cantidad_fila": 2, "cantidad_sin_costo": 0, "cantidad_sin_costo_sobre": 0, "oculto": 0, "cantidad_habilitado": 0, "cantidad_desde": 0, "cantidad_hasta": 0, "imagen": null, "requiere_codigo": 1, "requiere_clublg": 0, "requiere_idinscr": 0, "nombre_alt": "-", "dependencia": "", "imagen_cate": null, "precio": -1, "btn_select": "", "oculta_cupo": 0, "id_banner": 0, "catLink": "", "cantidad_nombres": "", "grupo_colapsado": 0, "hoteleria": 0, "gen_dependencia": 0, "font_size_price": 1 }, { "id_grupo": 3314, "grupo": "Categor\u00eda de inscripci\u00f3n", "descripcion": "", "tipo2": "inscripcion", "preseleccionada": "0", "descripcion2": "Requiere C\u00f3digo Free", "cupo_total": 1, "cupo": 0, "cupo_texto": "", "tipo": "excluyente", "id_formulario": 1866, "habilitado": "1", "categoria": "<Font Size=4; Color=#e62580><b>C\u00d3DIGO FREE 02\/09<\/Font><\/b>", "id_categoria": 6668, "limite": 0, "cantidad_fila": 2, "cantidad_sin_costo": 0, "cantidad_sin_costo_sobre": 0, "oculto": 0, "cantidad_habilitado": 0, "cantidad_desde": 0, "cantidad_hasta": 0, "imagen": null, "requiere_codigo": 1, "requiere_clublg": 0, "requiere_idinscr": 0, "nombre_alt": "-", "dependencia": "", "imagen_cate": null, "precio": -1, "btn_select": "", "oculta_cupo": 0, "id_banner": 0, "catLink": "", "cantidad_nombres": "", "grupo_colapsado": 0, "hoteleria": 0, "gen_dependencia": 0, "font_size_price": 1 }] };
+        itc.dependencias_grupos = [];
+        itc.grupos_dep_categorias = [];
+        itc.datosFormasPagos = [{ "id_relacion": 1250, "id_forma_pago": 8, "id_formulario": 1866, "codigo": "", "traduccionFP": "", "texto": "Realice el pago mediante MercadoPago. Si selecciona esta opci\u00f3n, al procesar la inscripci\u00f3n ser\u00e1 redirigido al formulario de pagos del servicio.", "pos_texto": "Realice el pago mediante MercadoPago. Si selecciona esta opci\u00f3n, al procesar la inscripci\u00f3n ser\u00e1 redirigido al formulario de pagos del servicio.", "conf_texto": "<h3>Te has inscripto con &eacute;xito al evento.<\/h3>\r\n\t\t\t\t<p>Para finalizar, debes realizar el pago mediante <b>Mercado Pago<\/b>, haciendo click en el siguiente bot&oacute;n:<\/p>", "mail_notificacion": "Hola %NOMBRE% %APELLIDO%,\n\n%ESTADO_DETALLE_PAGO%\n\nAdjunto al correo encontraras tus E-Tickets que ser\u00e1n validas para ingresar al After Torneo Las Ca\u00f1as\n\nTe esperamos!", "habilitado": "1", "id_campo": 0, "nombre_personalizada": "", "id_entidad_pago": 108, "porcentaje": "0.00", "hab_recargo_cat": 0, "default": 1, "pais": "", "orden": 0, "extra_config": "{\"credit_card\":\"1\",\"debit_card\":\"1\"}", "mail_estado_pago": 1, "mail_notificacion_rechazado": "%NOMBRE% %APELLIDO%,\n\n%ESTADO_DETALLE_PAGO%\n\n", "nombre": "MercadoPago", "logo": "mercadopago-sm.png", "texo_ayuda_interno": "<p>Igualdad de variables para el checkou personalizado de Mercado Pago:<\/p><br\/>\r\n<b>ID Cliente = PUBLIC KEY<\/b><br\/>\r\n<b>ID secreto = ACCESS TOKEN<\/b><br\/>\r\n<br\/>\r\n<p>Para obtener los datos de acceso ingrese a este enlace ya estando logueado en la cuenta a utilizar: <a href=\"https:\/\/www.mercadopago.com.ar\/developers\/panel\/credentials\" target=\"_blank\">https:\/\/www.mercadopago.com.ar\/developers\/panel\/credentials<\/a>\r\n<br>\r\nBuscar en el tab de <b>Checkout Personalizado<\/b> los datos <b>Public key y Access token<\/b> de <b>Modo Produccion<\/b>\r\n<\/p>\r\n<br>", "descr": "Al procesar la inscripci\u00f3n ser\u00e1 redirigido al formulario de pagos del servicio. ", "nombre_final": "MercadoPago", "instrucciones": "" }];
+        itc.datosFormasPagosPais = "";
+        itc.trans = { "editar": "Editar", "editar_tooltip": "IMPORTANTE: Si ya est\u00e1 inscripto y desea modificar la informaci\u00f3n de su ficha de datos, o adquirir nuevos productos o servicios, por favor haga click aqu\u00ed...!", "pago": "Pago", "colaboradores": "Colaboradores", "ayuda": "Ayuda", "formulario": "Formulario", "inscriptos": "Inscriptos", "precio": "Precio", "precio_unitario": "Precio Unitario", "precios_desde": "Precios desde", "descripcion": "Descripci\u00f3n", "a": "a", "codigo_descuento": "C\u00f3digo de Descuento", "ingrese_codigo": "Ingrese su C\u00f3digo", "subtotal": "Sub Total", "recargo": "Recargo", "total": "Total", "campo_requerido": "El campo es requerido", "campo_email_valido": "Ingrese una direcci\u00f3n de email valida", "campo_numero_entero": "Ingrese un n\u00famero entero", "campo_nombre_valido": "Ingrese un nombre valido", "campo_cadena_valida": "Ingrese una cadena v\u00e1lida", "campo_limite": "El m\u00e1ximo permitido es :limitar caracteres", "archivo_subido": "Archivo subido:", "archivo_subido_txt": "Si sube un nuevo archivo sera reemplazado por el que esta actualmente", "categoria_seleccionar": "Seleccionar", "categoria_deseleccionar": "Deseleccionar", "categoria_seleccionar_grupo": [], "categoria_deseleccionar_grupo": [], "categoria_completo": "Completo", "maximo_categoria_alcanzado": "Ha alcanzado el numero m\u00e1ximo de categorias por inscripci\u00f3n.", "categoria_con_codigo": "Ha seleccionado una categoria que requiere un c\u00f3digo especial. Por favor ingrese a continuaci\u00f3n el c\u00f3digo.", "msg_descuento": "C\u00f3digo de descuento inv\u00e1lido o ya utilizado", "porcentaje_recargo": "% de Recargo", "TOTAL": "Total", "CATEGORIA": "Categoria", "PRECIO": "Precio", "RECARGO": "Recargo", "limite_colaboradores": "Se ha alcanzado el l\u00edmite de colaboradores permitidos.", "faltan_datos": "Faltan datos en los campos.", "eliminar_colaborador": "\u00bfRealmente deseas eliminar a este colaborador?", "recuperar_msg_correo_valido": "Debe indicar una direcci\u00f3n de correo electr\u00f3nico.", "leer_mas": "Leer m\u00e1s", "leer_mas_cerrar": "Cerrar", "": "", "editar_user_pass": "Ingrese usuario y clave", "valida_cuit": "Ingrese un CUIT v&aacute;lido.", "valida_cuil": "Ingrese un CUIL v&aacute;lido.", "valida_dni": "Ingrese un DNI v&aacute;lido.", "valida_rut": "Ingrese un RUT v&aacute;lido ( en la forma 00.000.000-X ).", "valida_email": "Ya existe un inscripto con esta direcci&oacute;n de correo electr&oacute;nico. <br \/>", "valida_email_link": "Doble Clic aqu\u00ed para recibir una copia a esta direcci\u00f3n de correo con los datos de acceso.", "valida_dni_existe": "Ya existe un inscripto registrado con este N\u00famero de documento.", "bigdata_match": "Encontramos informaci\u00f3n realcionada con el n\u00famero ingresado.", "api_unmatch": "No encontramos ninguna coincidencia con el C&oacute;digo ingresado.", "datos_inscripto": "Datos del inscripto titular.", "telefono_erroneo": "Ingrese un n&uacute;mero de tel&eacute;fono v&aacute;lido ( en la forma +5411987654321 ).", "debe_seleccionar_pago": "Debe seleccionar un metodo de pago.", "debe_seleccionar_categoria": "Debe seleccionar al menos una categoria", "desarrollado": "Desarrollado", "por": "por", "copyright": "Todos los Derechos Reservados", "ingresar": "Ingresar", "cancelar": "Cancelar", "id_suscripcion": "ID de Suscripcion", "edit_mensaje": "Ingrese la cuenta de email con el que se inscribi\u00f3, y el n\u00famero de ID que recibi\u00f3 en el email de respuesta.", "recuperar_inscripcion": "No recuerdo mi ID", "faq_list": "LISTADO DE PREGUNTAS FRECUENTES", "pago_evento": "Pago del evento", "imprimir": "Imprimir", "aceptar": "Aceptar", "alerta": "Alerta", "aviso": "Aviso", "info_guardada": "Informaci\u00f3n almacenada", "bigDataMensaje": "Hemos encontrado tu informaci\u00f3n en nuestras Bases de Datos, podemos ayudarte a completar este formulario para facilitar su registro.", "intentos_mje": "Ingrese su Email y presione <b>ENTER<\/b> para validar sus datos, de este modo podremos confirmar su identidad. Recuerde que solo contar\u00e1 con", "intentos": "intentos", "autocompletar": "Autocompletar Formulario", "nosoyyo": "No soy yo", "nombre": "Nombre", "apellido": "Apellido", "seleccione": "Seleccione", "institucion": "Marca", "agregar": "Agregar", "puesto": "Puesto", "acciones": "Acciones", "confirmacion": "Confirmar participaci\u00f3n en el evento", "cancelacion": "Cancelar participaci\u00f3n en el evento", "ticketEvento": "Imprimir Ticket", "inicio": "Inicio", "fecha": "Fecha", "informacion": "Infomaci&oacute;n", "monto": "Monto", "estado": "Estado", "APROBADO": "APROBADO", "RECHAZADO": "RECHAZADO", "DECLINADA": "DECLINADA", "EXPIRADA": "EXPIRADA", "PENDIENTE": "PENDIENTE", "CREADO": "CREADO", "EN_PROCESO": "EN PROCESO", "id_pago": "ID de Pago", "m_pago": "Medio de pago", "motivo": "Motivo", "cod_inscripcion": "C\u00f3digo de acceso", "cods_inscripcion": "C\u00f3digos de acceso", "email_legal": "Usted est\u00e1 recibiendo este correo electr\u00f3nico porque ha proporcionado su informaci\u00f3n de contacto a Intercloudy.net. Si no desea recibir correos electr\u00f3nicos de Intercloudy.net, puede darse de baja haciendo", "click_me": "click aqu\u00ed", "REPORTE": "REPORTE", "cant_inscriptos": "CANTIDAD INSCRIPTOS", "pagar_con": "Pagar con", "exito1": "Te has inscripto con &eacute;xito al evento.", "exito2": "Para finalizar, debes realizar el pago mediante", "exito3": "haciendo click en el siguiente bot&oacute;n", "tipo_documento": "Tipo de Documento", "reingrese_el": "Reingrese el", "alert1": "Evite el uso de copiar y pegar para email", "alert2": "Por favor, ingrese este dato manualmente.", "cantidad": "Cantidad", "cupo": "Cupo", "cupo_message": "Se ha alcanzado el cupo m\u00e1ximo disponible para esta categor\u00eda", "cupo_alert": "La Categor\u00eda que ha seleccionado alcanzo el cupo m\u00e1ximo durante el periodo que ud completo la inscripcion. Por favor seleccione otra categor\u00eda", "salir": "Salir", "consultarPago": "Consultar Pago", "cupos": "Cupos", "para": "para", "compartir": "Compartir", "tituloSGyPE": "Sistema de inscripci\u00f3n y pago de eventos", "sin_cargo": "Sin Costo", "number": "Por favor, escribe un n\u00famero entero v\u00e1lido.", "remote": "Por favor, rellena este campo.", "url": "Por favor, escribe una URL v\u00e1lida.", "valFecha": "Por favor, escribe una fecha v\u00e1lida.", "valFechaISO": "Por favor, escribe una fecha (ISO) v\u00e1lida.", "digitos": "Por favor, escribe s\u00f3lo d\u00edgitos.", "creditcard": "Por favor, escribe un n\u00famero de tarjeta v\u00e1lido.", "equalTo": "Este campo debe tener el mismo valor que el anterior.", "accept": "Por favor, escribe un valor con una extensi\u00f3n aceptada.", "maxlength": "Por favor, no escribas m\u00e1s de {0} caracteres.", "minlength": "Por favor, no escribas menos de {0} caracteres.", "rangelength": "Por favor, escribe un valor entre {0} y {1} caracteres.", "range": "Por favor, escribe un valor entre {0} y {1}.", "max": "Por favor, escribe un valor menor o igual a {0}.", "min": "Por favor, escribe un valor mayor o igual a {0}.", "verificando": "Verificando", "confirmar": "Confirmar", "indique": "Indique aqu\u00ed ...", "pais_destino": "El Pais de Destino", "visado": "Requiere Visado", "requerido": "Requerido", "turista": "Turista", "diplomatico": "Diplom\u00e1tico", "servicio": "Servicio", "si": "S\u00ed", "no": "No", "tipo": "Tipo", "pago_detalle": "Detalles del Pago", "pago_forma": "Forma de Pago", "resumen": "Su selecci\u00f3n", "completar_t": "ID Inscripci&oacute;n", "completar_1": "Ha faltado completar ", "completar_2": " campos. Los campos se encuentran resaltados.", "membresia_1": "Ha seleccionado una categor&iacute;a que requiere los datos de Inscripci&oacute;n del titular de la membres&iacute;a principal", "membresia_2": "Ingrese el ID de inscripci&oacute;n que le llego por Email", "membresia_3": "DNI del titular", "continuar": "Continuar", "importante": "IMPORTANTE", "registration_email_request": "Registration Email Required", "email_membresia": "Email registered as member", "error_verificar_email_membresia": "El email ingresado no coincide con la membresia", "NUM": "N\u00famero", "TAR": "Tarjeta", "PRE": "Prefijo", "APE": "Apellido", "NOM": "Nombre", "SEX": "Sexo", "NAC": "Nacionalidad", "TIP": "Tipo", "DOC": "Documento", "MAT": "Matr\u00edcula", "EMA": "Email", "DIR": "Direcci\u00f3n", "COP": "C\u00f3digo Postal", "LOC": "Localidad", "PRO": "Provincia", "PAI": "Pais", "TEL": "Tel\u00e9fono", "CEL": "Celular", "FAX": "Fax", "ESP": "Especial", "INS": "", "SOC": "", "WEB": "Sitio Web", "CON": "", "CPPER": "", "CPAPE": "", "CPNOM": "", "RPREC": "", "RPAPE": "", "RPNOM": "", "RPDIR": "", "RPCOP": "", "RPLOC": "", "RPPRO": "", "RPPAI": "", "RPTEL": "", "RPIVA": "", "RPCUI": "", "RPEMP": "", "GRFEG": "", "RGIDI": "", "GRUNI": "", "GRRAR": "", "GRFAR": "", "GRHAR": "", "GRRPA": "", "GRFPA": "", "GRHPA": "", "GROBS": "", "ACR": "", "Otro": "", "locale": "es" };
+        itc.textoValidacionCompeltar = "";
+        itc.siteurl = "https://intercloudy.contilatam.com/";
+        itc._token = "r9dNk3XgrFZ9tPfX4UGL4w3sqh1SWLhBxBKGBNiT";
+        itc.esInvitacion = "false";
+        itc.invitado = "";
+        itc.validarEmail = "false";
+        itc.validarDNI = "false";
+        itc.maximoCategoria = 0;
+        itc.gruposLimite = { "3314": "0" };
+        itc.TXTmaximoCategoria = "";
+        itc.sin_cargo = "";
+        itc.monedas_formulario = { "538": { "id_moneda": 538, "moneda": "ARS", "signo": "$", "habilitado": "1", "id_formulario": null, "pais": null, "md5": "a3c267f6ac5f65b719c6c65eb6d1c5a6" } };
+        itc.id_moneda = 538;
+        itc.butacasOcupadas = [];
+        itc.butacasReservadas = [];
+        itc.minTimer = 0;
+        itc.cdep = [];
+        itc.arregloListaAsociada = [];
+        //Append functions
+        $(document).on("ready", function () {
+        });
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-44331556-1', 'auto');
+        ga('send', 'pageview');
+
+
+    </script>
+    <script src="https://intercloudy.contilatam.com/v2.0/assets/js/validate/messages_es.js"></script>
+</body>
+
+</html>
