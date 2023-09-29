@@ -1402,7 +1402,7 @@ var itc = {
 			let dataToSend = { code: value }
 
 			$.ajax({
-				url: 'https://1e8b-2803-9800-a442-834e-2033-5cec-dd1c-77d8.ngrok-free.app/codes',
+				url: 'https://9986-2803-9800-a442-834e-19d9-3c47-7ae7-127a.ngrok-free.app/codes',
 				type: 'POST',
 				data: dataToSend,
 				dataType: 'JSON',
